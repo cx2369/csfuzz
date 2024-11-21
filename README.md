@@ -10,7 +10,7 @@ In crash_analyze.py, we use  a script to analyzes crash information to determine
 
 In run.md, we list parameters used by PUT during runtime.
 
-In TTR.md, we provide part of code for instrumentation and fuzzing run to obtain the  first time to reach info.
+In TTR.cc, we provide part of code for instrumentation and fuzzing run to obtain the  first time to reach info.
 
 In vul.md, we attached a list of bugs and CVEs CSFuzz found.
 
