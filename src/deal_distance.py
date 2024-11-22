@@ -4,7 +4,7 @@ import os
 import shutil
 
 # print script name
-print("脚本名称:", sys.argv[0])
+print("script name:", sys.argv[0])
 
 if len(sys.argv) > 2:
     print("args")
