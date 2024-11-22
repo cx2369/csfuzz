@@ -17,20 +17,33 @@ In TTR.cc, we provide part of code for instrumentation and fuzzing run to obtain
 In vul.md, we attached a list of bugs and CVEs CSFuzz found.
 
 ### Run in Docker
-
+'''
 docker pull ubuntu:18.04
+
 docker run --name test -it --privileged=true --net=host ubuntu:18.04
+
 apt update
+
 apt install wget python3 git cmake gcc g++ unzip libjsoncpp-dev nlohmann-json-dev libboost-all-dev libpcap-dev libssl-dev -y
+
 wget https://github.com/llvm/llvm-project/releases/download/llvmorg-12.0.1/clang+llvm-12.0.1-x86_64-linux-gnu-ubuntu-16.04.tar.xz
+
 tar xvf clang+llvm-12.0.1-x86_64-linux-gnu-ubuntu-16.04.tar.xz
+
 mv clang+llvm-12.0.1-x86_64-linux-gnu-ubuntu- llvm
+
 export PATH=/llvm/bin/:$PATH
+
 export CPLUS_INCLUDE_PATH=/llvm/include:$CPLUS_INCLUDE_PATH
+
 export LIBRARY_PATH=/llvm/lib:$LIBRARY_PATH
+
 mkdir go
+
 cd go
+
 wget https://go.dev/dl/go1.23.3.linux-amd64.tar.gz
+
 tar xvf go1.23.3.linux-amd64.tar.gz
 cd /
 /go/go/bin/go install github.com/SRI-CSL/gllvm/cmd/...@latest
@@ -73,6 +86,6 @@ mv ../build/afl-llvm-rt.o.c.o ../build/afl-llvm-rt.o
 echo core >/proc/sys/kernel/core_pattern
 echo 0 > /proc/sys/kernel/randomize_va_space
 ../build/afl-fuzz -d -m none -t 1000+ -i ../../initial_corpus/tcpdump/ -o out/ ./tcpdump-asan-cx -evnnnr @@
-
+'''
 
 
