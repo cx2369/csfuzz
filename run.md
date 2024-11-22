@@ -1,3 +1,4 @@
+```
 jq '. @@'
 nm-new '-a -C -l --synthetic @@'
 tcpdump '-evnnnr @@'
@@ -14,3 +15,4 @@ sndfile_fuzzer '@@'
 sqlite3_fuzz '@@'
 tiff_read_rgba_fuzzer '@@'
 xmllint '--valid --oldxml10 --push --memory @@'
+```

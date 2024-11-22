@@ -1,3 +1,4 @@
+```
 //use 'gllvm/gclang;get-bc' or 'clang -Wl,--as-needed,-plugin-opt=save-temps;cp put.0.5.precodegen.bc put.bc' to get bc file
 
 //compile project with configure or cmake
@@ -17,3 +18,4 @@ imginfo 2.0.12
 wav2swf swftools 0.9.2
 lame 3.99.5
 sqlite3 SQLite-3.8.9
+```
