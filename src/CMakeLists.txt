@@ -14,7 +14,7 @@ target_include_directories(afl-runtime PRIVATE ./lib)
 set_target_properties(afl-runtime PROPERTIES POSITION_INDEPENDENT_CODE ON)
 
 add_executable(afl-fuzz ./afl-fuzz.c)
-target_compile_options(afl-fuzz PRIVATE -O2 -funroll-loops)
+target_compile_options(afl-fuzz PRIVATE -O2)
 target_include_directories(afl-fuzz PRIVATE ./lib)
 target_link_libraries(afl-fuzz PRIVATE $<TARGET_OBJECTS:afl-runtime>)
 target_link_libraries(afl-fuzz PRIVATE dl m stdc++ boost_program_options boost_graph jsoncpp)
