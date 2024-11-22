@@ -15,7 +15,6 @@ PROJ_ROOT = Path(__file__).resolve().parent.parent
 print(PROJ_ROOT)
 DIST_BIN = PROJ_ROOT / "ff/dis_calc"
 
-
 def calculate_cfg_distance_from_file(cfg: Path):
   prog = DIST_BIN
   dot_path = str(cfg)[:str(cfg).rfind('/')]
