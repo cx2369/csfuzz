@@ -8,9 +8,6 @@ link_directories(${LLVM_LIBRARY_DIRS})
 add_executable(afl-clang ./afl-clang.c)
 target_include_directories(afl-clang PRIVATE ./lib)
 
-add_executable(afl-clang++ ./afl-clang.c)
-target_include_directories(afl-clang++ PRIVATE ./lib)
-
 add_library(afl-runtime OBJECT ./afl-runtime.cc)
 target_compile_options(afl-runtime PRIVATE -O2)
 target_include_directories(afl-runtime PRIVATE ./lib)
